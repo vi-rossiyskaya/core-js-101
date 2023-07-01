@@ -27,8 +27,13 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(num) {
+  const isMultipleOfThree = num % 3 === 0;
+  const isMultipleOfFive = num % 5 === 0;
+  if (isMultipleOfFive && isMultipleOfThree) return 'FizzBuzz';
+  if (isMultipleOfFive) return 'Buzz';
+  if (isMultipleOfThree) return 'Fizz';
+  return num;
 }
 
 
